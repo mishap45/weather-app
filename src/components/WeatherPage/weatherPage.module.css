@@ -47,7 +47,6 @@
 
 .weatherImgBlock {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 40%;
     margin-left: 2%;
@@ -59,6 +58,7 @@
     font-weight: 400;
     font-size: 64px;
     margin-bottom: 5px;
+    margin-left: 35%;
 }
 
 .degreesText {
@@ -67,7 +67,8 @@
     font-weight: 400;
     font-size: 22px;
     margin-top: 5px;
-    margin-bottom: 35%;
+    margin-left: 35%;
+    width: 100%;
 }
 
 .weatherBlock {

@@ -4,22 +4,26 @@ import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import { SearchOutlined } from '@ant-design/icons'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
+import {async} from "q";
 
 const validateSchema = Yup.object().shape({
-    searchText: Yup.string()
+    searchWeather: Yup.string()
         .max(25, 'Too Long City!')
 });
 
 type searchWeather = {
-    searchText: string
+    searchWeather: string
 }
 
-const SearchWeatherForm = ({ history }: RouteComponentProps): JSX.Element => {
+type SearchWeatherFormTypes = {
+    getWeather: (city: string) => void
+}
 
-    const submit = (value: searchWeather) => {
-        alert(value.searchText);
-        value.searchText = '';
-        history.push('weather')
+const SearchWeatherForm = ({ history, getWeather }: RouteComponentProps & SearchWeatherFormTypes): JSX.Element => {
+
+    const submit = async (value: searchWeather) => {
+        await getWeather(value.searchWeather);
+        history.push('weather');
     };
 
     return (
@@ -28,7 +32,7 @@ const SearchWeatherForm = ({ history }: RouteComponentProps): JSX.Element => {
             <p className={style.head}>Weather App</p>
 
             <Formik
-                initialValues={{searchText: ''}}
+                initialValues={{searchWeather: ''}}
                 validationSchema={validateSchema}
                 onSubmit={submit}
             >
@@ -36,11 +40,11 @@ const SearchWeatherForm = ({ history }: RouteComponentProps): JSX.Element => {
                     <Form className={style.form}>
                         <SearchOutlined className={style.icon} />
                         <Field className={style.input} type="text"
-                               name="searchText"
+                               name="searchWeather"
                                placeholder={'Enter City'}/>
-                        { errors.searchText && touched.searchText ? (
+                        { errors.searchWeather && touched.searchWeather ? (
                             <div style={{ color: '#ff4d4f', fontWeight: 'bold', fontSize: 16 }}>
-                                { errors.searchText }
+                                { errors.searchWeather }
                             </div>
                         ) : null }
                     </Form>
