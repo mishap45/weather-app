@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.weather {
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+.weatherWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.weatherApp {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #eee;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cityName {
+    margin-left: 2%;
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+.day {
+    margin-left: 2%;
+    margin-top: 5px;
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.weatherImg {
+    width: 250px;
+}
+
+.weatherImgBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin-left: 2%;
+}
+
+.degrees {
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    margin-bottom: 5px;
+}
+
+.degreesText {
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 35%;
+}
+
+.weatherBlock {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.weatherTableBlock {
+    background-color: #eee;
+    margin-left: 10%;
+    width: 45%;
+    opacity: .5;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: 1s;
+}
+
+.weatherTableBlock:hover {
+    opacity: 1;
+    transition: 1s;
+}
+
+.weatherTableBlock > p {
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    opacity: 1 !important;
+    width: 30%;
+    text-align: center;
+}

@@ -1,0 +1,9 @@
+.main {
+    background-image: url('../../assets/img/weather.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
