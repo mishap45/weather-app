@@ -22,7 +22,7 @@ const SearchWeatherForm = ({ history, getWeather }: RouteComponentProps & Search
 
     const submit = async (value: searchWeather) => {
         await getWeather(value.searchWeather);
-        history.push('weather');
+        history.push('/weather');
     };
 
     return (

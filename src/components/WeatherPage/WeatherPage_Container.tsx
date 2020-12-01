@@ -37,9 +37,7 @@ const WeatherPage_Container:React.FC<WeatherPage_ContainerTypes> = ({ weather })
 
     const [img, setImg] = useState('');
 
-    return weather[0].city === 'gg'
-        ? <Redirect to={'/search'} />
-        : <WeatherPage weather={weather} days={days} months={months} img={img} setImg={setImg} />
+    return <WeatherPage weather={weather} days={days} months={months} img={img} setImg={setImg} />
 };
 
 const mapStateToProps = (state: AppStateType) => ({
