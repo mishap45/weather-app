@@ -16,6 +16,7 @@ Project is created with:
 * typescript: 4.1.2
 * web-vitals: 0.2.4
 * yup: 0.31.0
+* gh-pages: 3.1.0
 
 ## Get started
 Checkout this repo, install dependencies, then start the process with the following:
