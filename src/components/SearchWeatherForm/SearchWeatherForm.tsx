@@ -21,6 +21,7 @@ type SearchWeatherFormTypes = {
 const SearchWeatherForm = ({ history, getWeather }: RouteComponentProps & SearchWeatherFormTypes): JSX.Element => {
 
     const submit = async (value: searchWeather) => {
+        alert('word: ' + value.searchWeather);
         await getWeather(value.searchWeather);
         history.push('/weather');
     };
@@ -40,7 +41,7 @@ const SearchWeatherForm = ({ history, getWeather }: RouteComponentProps & Search
                         <SearchOutlined className={style.icon} />
                         <Field className={style.input} type="text"
                                name="searchWeather"
-                               placeholder={'Enter City'}/>
+                               placeholder={'Enter City Please'}/>
                         { errors.searchWeather && touched.searchWeather ? (
                             <div style={{ color: '#ff4d4f', fontWeight: 'bold', fontSize: 16 }}>
                                 { errors.searchWeather }

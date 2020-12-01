@@ -89,7 +89,8 @@ export const getWeather = (city: string): ThunkWeatherType => {
 
     return async (dispatch) => {
         let response = await weatherAPI.getWeatherAPI(city);
-
+        alert('word in reducer: ' + city);
+        alert('api data in reducer: ' + JSON.stringify(response));
         dispatch(actionsWeather.setWeather(response.name, response.sys.country, response.dt, response.weather[0].icon,
             response.weather[0].description, response.main.temp, response.sys.sunset, response.sys.sunrise, response.wind.speed,
             response.main.temp_max, response.main.temp_min, response.clouds.all, response.weather[0].main))

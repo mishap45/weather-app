@@ -35,10 +35,13 @@ export type WeatherType = {
 
 export const weatherAPI = {
     getWeatherAPI(city: string) {
-        const weather = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=eb516e5fc04e54a205cb177efc9f5fa1`;
+        const weather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=eb516e5fc04e54a205cb177efc9f5fa1`;
 
         return axios
             .get<WeatherType>(weather)
-            .then(response => response.data)
+            .then(response => {
+                alert('api data: ' + JSON.stringify(response.data));
+                return response.data
+            })
     }
 };
