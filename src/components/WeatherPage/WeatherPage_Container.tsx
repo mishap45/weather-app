@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import WeatherPage from './WeatherPage'
 import { weatherType } from '../../store/reducers/WeatherReducer'
 import { AppStateType } from '../../store/Redux'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { getWeatherCity } from '../../store/selectors/WeatherSelector'
-import {Redirect} from "react-router";
+import { Redirect } from 'react-router'
 
 type statePropsType = {
     weather: Array<weatherType>

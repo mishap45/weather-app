@@ -4,7 +4,6 @@ import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import { SearchOutlined } from '@ant-design/icons'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
-import {async} from "q";
 
 const validateSchema = Yup.object().shape({
     searchWeather: Yup.string()

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import style from './weatherPage.module.css'
 import Clouds from '../../assets/icons/weather/clouds.svg'
 import Drizzle from '../../assets/icons/weather/drizzle.svg'
