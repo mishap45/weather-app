@@ -21,7 +21,6 @@ type SearchWeatherFormTypes = {
 const SearchWeatherForm = ({ history, getWeather }: RouteComponentProps & SearchWeatherFormTypes): JSX.Element => {
 
     const submit = async (value: searchWeather) => {
-        alert('word: ' + value.searchWeather);
         await getWeather(value.searchWeather);
         history.push('/weather');
     };

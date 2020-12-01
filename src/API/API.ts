@@ -39,9 +39,6 @@ export const weatherAPI = {
 
         return axios
             .get<WeatherType>(weather)
-            .then(response => {
-                alert('api data: ' + JSON.stringify(response.data));
-                return response.data
-            })
+            .then(response => response.data)
     }
 };
