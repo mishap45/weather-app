@@ -3,7 +3,7 @@ import style from './searchWeatherForm.module.css'
 import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import { SearchOutlined } from '@ant-design/icons'
-import { withRouter, RouteComponentProps, Link } from 'react-router-dom'
+import { withRouter, RouteComponentProps } from 'react-router-dom'
 
 const validateSchema = Yup.object().shape({
     searchWeather: Yup.string()
